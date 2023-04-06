@@ -97,7 +97,7 @@ body {
 }
 
 .content-title--main{
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0px 20px auto;
     font-weight: bold;
 }
 
