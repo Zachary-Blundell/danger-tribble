@@ -85,9 +85,7 @@ body {
     font-size: 3em;
     margin-right: 2rem;
     border-top: 3px solid #f39c12;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: end; */
+
 }
 
 .content-title {
@@ -107,10 +105,10 @@ body {
     font-size: smaller;
 }
 
-
 .content-picture {
     width: 50%;
     position: relative;
+    max-width: 640px;
 }
 
 .rounded {
@@ -119,8 +117,10 @@ body {
 }
 
 .picture {
-    width: 100%;
+    max-width: 640px;
     display: block;
+    max-height: 350px;
+    width: 100%;
 }
 
 .content-quote {
@@ -150,8 +150,6 @@ body {
     font-weight: bold;
 }
 
-
-
 .content ol {
     list-style-type: decimal;
     font-size: 1.1em;
@@ -169,7 +167,6 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-
 }
 
 .button-change-effect:hover{
@@ -178,10 +175,10 @@ body {
     transition: 300ms;
 }
 
-
 .card {
-    margin-bottom: 2rem;
-    max-width: 48%;
+    margin-bottom: 1rem;
+    max-width: 640px;
+    width: 48%;
 }
 
 .card-title {
@@ -232,21 +229,14 @@ body {
 /*
     Styles pour les écrans de moins de 1200px de large :
 */
-
-/*
-
-@media screen and (max-width:1200px){
+@media screen and (max-width:1200px) {
+    .content-title--sub{
+        margin-bottom: 15px;
+    }
+    
     .content-focus {
-        display: block;
-    }
-    .card-footer{
         display: flex;
-    margin: 2rem 1rem;
-    }
-
-    .page{
-        display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
     }
     
     .content-titles {
@@ -254,30 +244,46 @@ body {
         text-align: center;
         margin-right: 0;
     }
-    
+
     .content-title {
         max-width: none;
     }
-    
+
     .content-picture {
         width: auto;
     }
     
+    .btn {
+        max-width: 200px;
+        margin: 5px 0px 5px 0px;
+    }
+
+    .page {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     .articles-container {
-        display:flex;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
+
+    .articles-container {
+        display: flex;
+    }
+
     .card {
-        width:auto;
+        width: 100%;
     }
-    
+}
 
-
-*/
 
 /*
     Styles pour les écrans de moins de 900px de large :
 */
-/*
+@media screen and (max-width: 900px) {
     .header {
         position:static;
         width:auto;
@@ -285,9 +291,25 @@ body {
         margin-left:0;
     }
 
+    .card-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 2rem 1rem;
+    }
+
     .container {
         width:96%;
         padding-left:0;
+    }
+
+    .articles-container{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .header{
+        height: 150px;
     }
 
     .page {
@@ -296,23 +318,26 @@ body {
 
     .nav {
         padding: 1rem;
+        padding: 0px;
     }
 
     .nav .title {
-        display:none;
+        display: none;
     }
 
     .nav-links {
         margin-top:0;
+        display: flex;
     }
 
     .nav-item {
-        width:calc(33.3333% - .5rem);
+        width:calc(33.3333%);
+        height: calc(20% - .5rem);
+        font-size: .7rem;
         text-align: center;
     }
 
     .nav-item-link {
         margin-bottom: 0;
     }
-
-*/
+} 
